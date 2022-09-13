@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo bảng tính đơn giản</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; }
+
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+            background:#BBDEFB; }
+
+        .center {
+            background: #000;
+            max-width: 400px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px; }
+
+        #display {
+            color: #fff;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            text-align: right;
+            background: #2962FF; }
+
+        input[type="button"] {
+            width: 67px;
+            height: 50px;
+            margin-bottom: 5px; }
+        input[type="button"]:hover {
+            background: #2962FF; }
+
+        input {
+            border: none;
+            font-size: 20px; }
+        input:hover {
+            cursor: pointer;
+            color: #fff; }
+
+        #equal {
+            width: 100%; }
+
+        #clear {
+            color: #fff;
+            background: #D50000; }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="center">
+        <form name="form" method="post">
+            <input type="text" id="display" name="display" disabled>
+            <div class="buttions">
+                <input type="button" id="seven" value="7">
+                <input type="button" id="eight" value="8">
+                <input type="button" id="night" value="9">
+                <input type="button" id="multi" value="*"><br>
+                <input type="button" id="four" value="4">
+                <input type="button" id="five" value="5">
+                <input type="button" id="six" value="6">
+                <input type="button" id="divide" value=" /"><br>
+                <input type="button" id="one" value="1">
+                <input type="button" id="two" value="2">
+                <input type="button" id="three" value="3">
+                <input type="button" id="add" value="+"><br>
+                <input type="button" id="zero" value="0">
+                <input type="button" id="dot" value=" .">
+                <input type="button" id="subs" value="- ">
+                <input type="button" id="clear" value="C"><br>
+                <input type="button" id="equal" value="=">
+
+
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
