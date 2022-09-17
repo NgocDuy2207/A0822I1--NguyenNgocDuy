@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td width="100px">From Currency</td>
+            <td>To Currency</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="amount" name="amount"></td>
+            <td width="100px">
+                <select id="from">
+                    <option value="0" name="from">Việt Nam</option>
+                    <option value="1" name="from">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="1" name="to">USD</option>
+                    <option value="0" name="to">Việt Nam</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="Convert()" style="background: aqua">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="ketqua"></p>
+    <script>
+        function Convert() {
+            const num_amount = 23000;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let amount = +document.getElementById("amount").value;
+            if(from == to){
+                document.getElementById("ketqua").innerHTML = "Vui Lòng Nhập Lại: " + amount;
+            }
+            if(from== '0' && to == '1'){
+                document.getElementById("ketqua").innerHTML = " Số Tiền USD nhận được là :  " + amount/num_amount;
+
+            }
+            if(from == '1' && to == '0'){
+                document.getElementById("ketqua").innerHTML = "Số tiền VND nhận được là: " + amount*num_amount;
+            }
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>
