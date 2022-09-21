@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài Tập 7</title>
+</head>
+<body>
+    <span>số phút đã gọi trong 1 tháng: <input type="text" id="second"></span>
+    <button onclick="number()">Số Tiền</button><br>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function number() {
+            let second = parseInt(document.getElementById("second").value);
+            const a = 800;
+            const b = 900;
+            if(second >= 0 && second < 60){
+                document.getElementById("ketqua").innerText = "giá điện là: "+ (second*a);
+            }else {
+                document.getElementById("ketqua").innerText = "giá điện là: " + (second*b);
+            }
+
+        }
+    </script>
+
+</body>
+</html>
