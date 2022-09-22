@@ -16,7 +16,7 @@
             const dependentsDeduction = 4400000; // giảm trừ cho 1 người phụ thuộc
             let salary = document.getElementById("salary").value;
             let reduce = document.getElementById("reduce").value;
-            const insurance = salary*10.5/100; // giảm trừ gồm bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hỉểm xã hội phải đóng
+            let insurance = salary*10.5/100; // giảm trừ gồm bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hỉểm xã hội phải đóng
             let assessable_income	 = salary - personalDeduction - reduce*dependentsDeduction - insurance; // thu nhập tính thuế
             if(assessable_income < 0){
                 document.getElementById("display").innerText = "không chịu thuế TNCN";
