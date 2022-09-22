@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 7: Phương trình bậc 2</title>
+</head>
+<body>
+  <span>nhập vào tham số a: <input type="text" id="a"></span>
+    <span>nhập vào tham số b: <input type="text" id="b"></span>
+    <span>nhập vào tham số c: <input type="text" id="c"></span>
+    <button onclick="nghiem()">Nghiệm của PT</button><br>
+    <p id="kq"></p>
+
+
+
+    <script>
+        function nghiem() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            if(a == 0){
+                if (b==0){
+                    if (c==0){
+                        document.getElementById("kq").innerText = "phương trình vô số nghiệm";
+                    }else {
+                        alert("phương trình vô nghiệm");
+                    }
+                }else {
+                    document.getElementById("kq").innerText = "phương trình có một nghiệm duy nhất là: " +(-c/b);
+                }
+            }else{
+                d = b*b - 4*a*c;
+                if(d == 0){
+                   document.getElementById("kq").innerText = "phương trình có một nghiệm là:" +(-b/(2*a));
+                }else if(d > 0){
+                    document.getElementById("kq").innerText = "phương trình có 2 nghiệm là: "+"x1 =" +(-b+Math.sqrt(d))/(2*a)+ " x2="+ (-b-Math.sqrt(d)/(2*a));
+                }else {
+                    document.getElementById("kq").innerText = "phương trình vô nghiệm";
+                }
+            }
+
+
+        }
+    </script>
+
+</body>
+</html>

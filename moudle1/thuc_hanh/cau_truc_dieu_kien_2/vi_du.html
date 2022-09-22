@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vi du</title>
+</head>
+<body>
+    <script>
+
+        var a = prompt("nhap vao a");
+        var b = prompt("nhap vao b");
+        var c = prompt("nhap vao c");
+
+        if(a == 0){
+            if (b==0){
+                if (c==0){
+                    alert("Phương trình vô số nghiệm");
+                }else {
+                    alert("phương trình vô nghiệm");
+                }
+            }else {
+                alert("phương trình có một nghiệm duy nhất là: " +(-c/b));
+            }
+        }else{
+
+            var d = b*b - 4*a*c;
+            if(d == 0){
+                alert("phương trình có một nghiệm là: +((-b)/2*a)");
+            }else if(d > 0){
+                alert("phương trình có 2 nghiệm là: "+"x1 =" +(-b+Math.sqrt(d))/(2*a)+ "x2="+ (-b-Math.sqrt(d)/(2*a)));
+            }else {
+                alert("phương trình vô nghiệm");
+            }
+        }
+    </script>
+
+
+</body>
+</html>

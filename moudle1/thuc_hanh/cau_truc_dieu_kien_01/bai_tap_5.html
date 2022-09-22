@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 5</title>
+</head>
+<body>
+    <span>Điểm bài kiểm tra: <input type="text" id="kiemtra"></span>
+    <span>Điểm kiểm tra giữa kỳ: <input type="text" id="giuaky"></span>
+    <span>Điểm kiểm tra cuối kỳ: <input type="text" id="cuoiky"></span>
+    <button onclick="xeploai()">xếp loại</button> <br>
+    <h4 id="ketqua"></h4>
+    <script>
+
+        function xeploai() {
+            let kiemtra = parseFloat(document.getElementById("kiemtra").value);
+            let giuaky = parseFloat(document.getElementById("giuaky").value);
+            let cuoiky = parseFloat(document.getElementById("cuoiky").value);
+            // kiểm tra: là kiểm tra 15p hệ số 1
+            // giuaky: là kiểm tra 1 tiết 45p hệ số 2
+            // cuoiky: là kiểm tra cuối kỳ hệ số 3
+
+            let tong  = (kiemtra + giuaky*2 +cuoiky*3)/6;
+             if (kiemtra <=10 && kiemtra >= 0 && giuaky >0 && giuaky <=10 && cuoiky >=0 && cuoiky <=10) {
+                 if (tong >= 8.5 && tong <= 10){
+                     document.getElementById("ketqua").innerHTML = "Điểm "+ tong+ " là học sinh giỏi";
+                 } else if (tong >= 6.5 && tong < 8.5){
+                     document.getElementById("ketqua").innerHTML = "Điểm"+ tong+ " là học sinh khá";
+                 }else if (tong >= 5.5 && tong < 6.5){
+                     document.getElementById("ketqua").innerHTML = "Điểm"+ tong+ " là học sinh trung bình";
+                 }else {
+                     document.getElementById("ketqua").innerHTML = "Điểm"+ tong+ " là học sinh yếu";
+                 }
+             } else {
+                 document.getElementById("ketqua").innerText = " bạn nhập sai điểm thành phần điểm, vui lòng nhập lại điểm";
+             }
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
