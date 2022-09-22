@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vi du</title>
+</head>
+<body>
+    <span>Thu nhập Thực Nhận: <input type="text " id="salary"></span><br>
+    <span>Giảm Trừ Gia Cảnh: <input type="text" id="reduce"></span>
+    <button onclick="result()">Thuế phải đống</button><br> <br>
+    <p id="display"></p>
+    <script>
+        function result() {
+           // const personalDeduction = 11000000;
+           // const dependentsDeduction = 4400000;
+            let salary = document.getElementById("salary").value;
+            let reduce = document.getElementById("reduce").value;
+         //   const insurance = salary * 10.5 / 100;
+          //  let assessable_income = salary - personalDeduction - reduce * dependentsDeduction - insurance;
+            document.getElementById("display").innerText = "tien"+(salary +reduce);
+        }
+
+
+    </script>
+
+
+</body>
+</html>

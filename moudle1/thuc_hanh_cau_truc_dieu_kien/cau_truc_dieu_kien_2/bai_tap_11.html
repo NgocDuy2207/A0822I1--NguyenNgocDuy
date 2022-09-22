@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 11: Tính Thuế Thu Nhập Cá Nhân</title>
+</head>
+<body>
+    <span>Thu nhập Thực Nhận: <input type="text " id="salary"></span><br>
+    <span>Giảm Trừ Gia Cảnh: <input type="text" id="reduce"></span>
+    <button onclick="result()">Thuế phải đống</button><br>
+    <p id="display"></p>
+
+    <script>
+        function result() {
+            const personalDeduction = 11000000; // giảm trừ cho bản thân
+            const dependentsDeduction = 4400000; // giảm trừ cho 1 người phụ thuộc
+            let salary = document.getElementById("salary").value;
+            let reduce = document.getElementById("reduce").value;
+            const insurance = salary*10.5/100; // giảm trừ gồm bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hỉểm xã hội phải đóng
+            let assessable_income	 = salary - personalDeduction - reduce*dependentsDeduction - insurance; // thu nhập tính thuế
+            if(assessable_income < 0){
+                document.getElementById("display").innerText = "không chịu thuế TNCN";
+            }else if(assessable_income <= 5000000) {
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " + assessable_income * 0.05;
+            }else if(assessable_income <=10000000){
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " +((assessable_income*0.1)-250000);
+            }else if(assessable_income <= 18000000){
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " +((assessable_income*0.15)-750000);
+            }else if(assessable_income <=32000000){
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " +((assessable_income*0.2)-1650000);
+            }else if(assessable_income <= 52000000){
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " + ((assessable_income*0.25)-3250000);
+            }else if(assessable_income <=80000000){
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " + ((assessable_income*0.3)-5850000);
+            }else {
+                document.getElementById("display").innerText = "Thuế TNCN phải nộp là: " + ((assessable_income*0.35)-9850000);
+
+            }
+
+
+
+        }
+    </script>
+
+</body>
+</html>

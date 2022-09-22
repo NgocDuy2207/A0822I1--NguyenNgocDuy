@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 12: Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <span>Saving Account: (VND) <input type="text" id="saving_account"></span>
+    <span>Interest rate:(%) <input type="text" id="interest_rate"></span>
+    <span>Saving Fixed:(month) <input type="text" id="saving_fixed"></span>
+    <button onclick="result()">Interest</button> <br>
+    <p id="display"></p>
+
+
+    <script>
+        function result() {
+            let saving_account = document.getElementById("saving_account").value; // tiền gốc lúc ban đầu
+            let interest_rate = document.getElementById("interest_rate").value; // lãi suất 1 tháng
+            let saving_fixed = document.getElementById("saving_fixed").value; // số tháng gửi tiết kiện
+            let rate = saving_account*Math.pow((1+interest_rate/100), saving_fixed) - saving_account;
+            // tiền lãi sau saving_fixed tháng gửi tiết kiện
+            document.getElementById("display").innerText = "số tiền lãi nhận được" +rate;
+
+        }
+    </script>
+
+</body>
+</html>
