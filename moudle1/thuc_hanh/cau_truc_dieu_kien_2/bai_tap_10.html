@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 10: Tính tiền Điện gia đình</title>
+</head>
+<body>
+    <span>Số Kilowatt đã sử dụng: <input type="text" id="kilowatt"></span>
+    <button onclick="change()">Change</button><br>
+    <p id="result"></p>
+    <script>
+        function change() {
+            const bac1 = 1678;
+            const bac2 = 1734;
+            const bac3 = 2014;
+            const bac4 = 2536;
+            const bac5 = 2834;
+            /*
+            bậc 1 : Cho kWh từ 0 - 50	:
+            bậc 2 : Cho kWh từ 51 - 100	:
+            bậc 3: Cho kWh từ 101 - 200	:
+            bậc 4 : Cho kWh từ 201 - 300	:
+            bac 5: cho kwh trên 300;
+
+             */
+            let kilowatt = document.getElementById("kilowatt").value;
+            if(kilowatt < 0){
+                document.getElementById("result").innerText = "vui lòng nhập lại số kilowatt/giờ, kilowatt/giờ phải lớn hơn 0";
+            }else if(kilowatt <= 50){
+                document.getElementById("result").innerText = "Số tiền điện phải trả là: " +kilowatt*bac1;
+            }else if (kilowatt <=100){
+                document.getElementById("result").innerText = "số tiền điện phải trả là: " +(50*bac1 +(kilowatt-50)*bac2);
+            }else if(kilowatt <= 200){
+                document.getElementById("result").innerText = "số tiền điện phải trả là: " +(50*bac1 + 50*bac2 +  (kilowatt-100)*bac3);
+            }else if(kilowatt <= 300){
+                document.getElementById("result").innerText = "số tiền điện phải trả là: " +(50*bac1 +50*bac2 + 100*bac3 + (kilowatt-200)*bac4);
+            }else {
+                document.getElementById("result").innerText = "số tiền điện phải trả là: " +kilowatt*bac5;
+            }
+
+        }
+    </script>
+</body>
+</html>
