@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 2: tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        var number = parseInt(prompt("nhập vào số nguyên dương"));
+        var n = 1;
+            for (var i = 1; i <= number;i++){
+            n *=i;
+            document.getElementById("result").innerText ="gia thừa của Number là: "+ n;
+        }
+    </script>
+
+</body>
+</html>

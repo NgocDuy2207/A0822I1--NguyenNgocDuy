@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 4: tìm số fibonacci đầu tiên chia hết cho 5</title>
+</head>
+<body>
+    <script>
+        let firstF= 0, seconđF = 1, nextFibonacci;
+        for ( let i = 0;;i++){
+
+            nextFibonacci = firstF + seconđF;
+            firstF = seconđF;
+            seconđF = nextFibonacci;
+            if ( firstF%5==0){
+                console.log(firstF);
+                break;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

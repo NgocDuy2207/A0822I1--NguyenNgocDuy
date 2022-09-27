@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết chương trình tính lãi ngân hàng</title>
+</head>
+<body>
+    <script>
+        var loanAmount ; // tiền gốc
+        var timeMonth; // thời gian tính bằng tháng
+        const interestRate = 0.15;// lãi suất cố định hàng tháng
+       do {
+           loanAmount = Number(parseFloat(prompt("số tiền gốc")));
+           timeMonth = Number(parseInt(prompt("số tháng vay")));
+           var interestPaypable = loanAmount*Math.pow((1+interestRate), timeMonth) - loanAmount;
+           // interestPayyable : lãi phải trả
+           if (loanAmount < 0 || timeMonth < 0){
+               alert("vui lòng nhập lại, tiền góc và số tháng cho vay phải lớn hơn 0");
+           }else {
+               break;
+           }
+       }while (true);
+       alert("lãi phải trả trong "+ timeMonth +" tháng vay là: " +interestPaypable);
+
+
+    </script>
+
+</body>
+</html>

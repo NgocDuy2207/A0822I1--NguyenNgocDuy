@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 3</title>
+</head>
+<body>
+    <script>
+        const h = 6;
+        for (var i=0;i<=5;i++){
+            for (var j=0;j<i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+
+        document.write("<br>");
+
+
+
+        for ( i = 0; i < h;i++){
+            for ( j = i; j<h-1 ;j++){
+                document.write('&nbsp&nbsp');
+            }
+            for (j=0;j<i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+
+
+        for ( i=0; i< h;i++){
+            for (j=i ;j<h-1;j++){
+                document.write("*");
+            }
+            for (j=0;j<=i;j++){
+                document.write('&nbsp');
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+
+
+        for (i=0; i < h;i++){
+            for (j=0 ; j<i;j++){
+                document.write('&nbsp&nbsp');
+            }
+            for (j=i;j<h-1;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+
+
+</body>
+</html>

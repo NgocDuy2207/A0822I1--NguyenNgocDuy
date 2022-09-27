@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng củu chương</title>
+</head>
+<body>
+    <span id="result"></span>
+    <script>
+        let idTable = '<table border="1">';
+        for(let i = 1 ; i <= 10 ; i++){
+            idTable += '<tr>';
+            for (let j = 2;j < 10 ;j++){
+                idTable +='<td style="width: 100px">'+j +"*"+i+ "="+ j*i+'  </td>';
+            }
+            idTable += '</tr>';
+        }
+        idTable += '</table>';
+        document.getElementById("result").innerHTML = idTable;
+
+    </script>
+
+</body>
+</html>
