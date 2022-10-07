@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược vị trí trong mảng</title>
+</head>
+<body>
+    <script>
+        let numbers = +prompt("nhập độ dài mảng");
+        let arr = [];
+        for (let i = 0; i < numbers;i++){
+            arr[i] = +prompt("nhập vào phần tử thứ " + i);
+        }
+        document.write( arr +" <br>");
+        // khởi tạo và đảo ngược
+        let first = 0;
+        let last = arr.length -1;
+        while (last > first){
+            let temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+        document.write(arr);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên âm trong chuỗi</title>
+</head>
+<body>
+
+    <script>
+        // Tạo hàm nhập một chuỗi
+        const strings = window.prompt();
+        const arrStr = strings.toString();
+        for (let i = 0; i < arrStr.length;i++){
+
+        }
+        document.write(arrStr + "<br>");
+        // tao function
+        function vowel_count(str1)
+        {
+            var vowel_list = 'aeiouAEIOU';
+            var vcount = 0;
+
+            for(var x = 0; x < str1.length ; x++)
+            {
+                if (vowel_list.indexOf(str1[x]) !== -1)
+                {
+                    vcount += 1;
+                }
+            }
+            return vcount;
+        }
+        document.write(vowel_count(arrStr));
+    </script>
+
+
+
+</body>
+</html>

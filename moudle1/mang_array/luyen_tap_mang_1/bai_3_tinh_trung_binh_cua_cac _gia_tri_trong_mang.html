@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính trung bình giá trị  trong mảng</title>
+</head>
+<body>
+    <script>
+        let numbers = +prompt("nhập độ dài mảng");
+        let arr = [];
+        for (let i = 0; i < numbers;i++){
+            arr[i] = +prompt("nhập vào phần tử thứ " + i);
+        }
+        let max = arr[0];
+        index = 0;
+        let sumAvg = 0;
+        for(let j = 0; j < arr.length; j++){
+            if (arr[j] >= j){
+                max = arr[j];
+            }
+            sumAvg +=(arr[j])/arr.length;
+        }
+        document.write("giá trị max là " +max + " tổng là trung bình " + sumAvg);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

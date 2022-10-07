@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+    <script>
+        let numbers = +prompt("nhập vào độ dài mảng");
+        let arr = [];
+        for (let i = 0; i < numbers;i++){
+            arr[i] = +prompt("nhập vào phần tử thứ " + i+ "");
+        }
+
+        document.write("mảng là: " +arr + "<br>" );
+        let max = arr[0];
+        let index = 0;
+        for (let j = 1; j < arr.length; j++) {
+            if (max < arr[j]) {
+                max = arr[j];
+                index = j;
+            }
+        }
+        document.write("giá trị lớn nhất " + max + "nằm ở vị trí "+ index +"<br>");
+
+
+    </script>
+
+</body>
+</html>

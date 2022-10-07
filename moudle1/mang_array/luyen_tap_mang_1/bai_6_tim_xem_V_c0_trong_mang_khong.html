@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm V có trong mảng không</title>
+</head>
+<body>
+    <script>
+        let numbers = +prompt("nhập vào độ dài mảng");
+        let arr = [];
+        for (var i = 0; i < numbers;i++){
+            arr[i] = +prompt("nhập vào phần tử thứ "+ i);
+        }
+        alert(arr);
+        let value = +prompt("Enter a number");
+        let cont = false;
+        for (let j = 0; j < arr.length;j++){
+            if (value === arr[j]){
+                alert("V is in the array");
+                cont = true;
+            }
+        }
+        if (cont == false){
+            alert("V is not in the array");
+            cont = false;
+        }
+
+    </script>
+
+</body>
+</html>
