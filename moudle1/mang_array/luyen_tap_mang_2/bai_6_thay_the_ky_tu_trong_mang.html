@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thay thế ký tự trong mảng</title>
+</head>
+<body>
+    <script>
+        let length = prompt("độ dài mảng");
+        let arr = [];
+        for (let i = 0; i<length;i++){
+            arr[i] = prompt("nhập vào phần tử thứ"+i );
+        }
+        let char = '-';
+        let change = '_';
+        for (let i = 0; i < arr.length;i++){
+            if (arr[i] == char){
+                arr[i] = change;
+            }
+        }
+        document.write(arr);
+
+    </script>
+
+</body>
+</html>

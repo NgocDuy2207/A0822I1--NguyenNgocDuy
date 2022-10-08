@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 3, đếm số ký tự trong mảng</title>
+</head>
+<body>
+    <script>
+
+        let numBers = +prompt("nhập độ dài mảng ");
+        let arrA = [];
+        for (let i =0; i < numBers; i++){
+            arrA[i] = +prompt("nhập phần tử thứ " +i);
+        }
+
+        const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let count = 0;
+        for (let i = 0; i < arrA.length ; i++){
+           for (let j = 0; j < arrNumber.length; j++){
+               if (arrA[i] == arrNumber[j]){
+                   count += 1;
+               }
+           }
+        }
+        document.write("số lượng ký tự số là " + count);
+    </script>
+
+</body>
+</html>

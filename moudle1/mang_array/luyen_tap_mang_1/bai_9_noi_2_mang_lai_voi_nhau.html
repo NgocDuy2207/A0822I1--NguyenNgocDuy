@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9: nối 2 mảng lại với nhau</title>
+</head>
+<body>
+    <script>
+        let numberA = +prompt("nhập độ dài mảng A");
+        let arrA = [];
+        for (let i =0; i < numberA; i++){
+            arrA[i] = +prompt("nhập phần tử thứ " +i);
+        }
+        let numberB = +prompt("nhập độ dài mảng B");
+        let arrB = [];
+        for (let i =0; i <numberB; i++){
+            arrB[i] = +prompt("nhập phần tử thứ " +i);
+        }
+        let arrC = arrA+arrB;
+        document.write(arrC);
+
+
+    </script>
+
+</body>
+</html>

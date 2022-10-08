@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8: viết chương trình sắp xếp giảm dần</title>
+</head>
+<body>
+    <script>
+        let numbers = prompt("nhập vào độ dài mảng");
+        do {
+            if (numbers <= 0){
+                alert("vui lòng nhập numbers lớn hơn không");
+            }
+
+        }while(numbers <=0);
+        let arr = [];
+        for (let i =0; i < numbers; i++){
+            arr[i] = prompt("nhập vào phần tử thứ " + i);
+        }
+        document.write(arr+"<br>");
+
+        for (let i = 0; i < arr.length-1;i++){
+            for (let j=i+1; j < arr.length; j++){
+                let permute = arr[i];
+                arr[i] = arr[j]
+                arr[j] = permute;
+            }
+        }
+        document.write(arr);
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

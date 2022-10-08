@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng 2 chiều và in ra</title>
+</head>
+<body>
+    <script>
+
+        // nhập vào mảng 2 chiều
+        let rows = +prompt("nhập số hàng");
+        let cols = +prompt("nhập số cột");
+        let arr = new Array(rows);
+        for (let i = 0; i < arr.length;i++){
+            arr[i] = new Array(cols);
+            for (let j = 0; j <arr[i].length;j++){
+                arr[i][j] = window.prompt("nhập vào phần tử hàng"+i+"cột"+j );
+            }
+        }
+        // in mảng 2 chiều
+        for (let i = 0; i < arr.length;i++){
+            for (let j = 0; j < arr[i].length;j++){
+                document.write(arr[i][j]+",");
+            }
+            document.write("<br>");
+        }
+
+        for (var i in arr){
+            document.write("row " + i );
+            for(var j in arr[i]){
+                document.write(" " + arr[i][j]);
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
