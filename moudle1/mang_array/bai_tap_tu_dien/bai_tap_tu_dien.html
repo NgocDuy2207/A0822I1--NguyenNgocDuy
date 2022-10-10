@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập từ điển</title>
+</head>
+<body>
+    <script>
+
+        // let input = prompt("nhập vào từ tiếng anh");
+        //
+        // let arrEngLish = ['good morning', 'good afternoon', 'say good bye', 'hello kitty'];
+        // let arrVietNamese = ['chào buổi sáng', 'chào buổi chiều', 'tạm biệt bạn','chào con mèo'];
+        // let index = 0;
+        //
+        // for (let i = 0 ; i < arrEngLish.length -1; i++) {
+        //     if (input == arrEngLish[i]){
+        //         index=i;
+        //         alert(arrVietNamese[index]);
+        //         break;
+        //     }
+        //     if (input !== arrEngLish[i]) {
+        //         alert("không tìm thấy");
+        //     }let arrEngLish = ['good morning', 'good afternoon', 'say good bye', 'hello kitty'];
+        //
+        // }
+
+
+        function changeVocabulary(english) {
+            let arrEngLish = ['good morning', 'good afternoon', 'say good bye', 'hello kitty'];
+            let arrVietNamese = ['chào buổi sáng', 'chào buổi chiều', 'tạm biệt bạn','chào con mèo'];
+            let index = 0;
+            for (let i=0; i < arrEngLish.length;i++){
+                if (english == arrEngLish[i]){
+                     index = i;
+                    alert(arrVietNamese[i]);
+                    break;
+                }
+            }if (index == 0){
+                alert("hông tìm ra");
+            }
+
+        }
+            let english = prompt("nhập vào tiếng anh");
+            changeVocabulary(english);
+
+
+
+    </script>
+
+</body>
+</html>
