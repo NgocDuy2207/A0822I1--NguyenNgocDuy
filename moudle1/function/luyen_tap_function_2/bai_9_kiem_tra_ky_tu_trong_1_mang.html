@@ -16,7 +16,7 @@
         let count = 0;
         //gọi hàm
         alert(checkArr(char, arr));
-        alert("số phần tử đó có trong mảng" + count);
+        
         function checkArr(element, arr1) {
 
             for (let i = 0; i < arr1.length;i++){
@@ -24,7 +24,7 @@
                     count++;
                 }
             }
-            return (count > 0) ? true : false;
+            return (count > 0) ? count : -1;
         }
     </script>
 
