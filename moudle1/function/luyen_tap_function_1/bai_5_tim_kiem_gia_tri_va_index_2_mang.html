@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm tìm kiếm và trả index</title>
+</head>
+<body>
+    <script>
+
+        let inputString = prompt("nhập vào ngôi sao");
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe ", "Regulus"];
+        let constellation = ["Ursa Minor", "Tarurus","Cygnus", " Lyra", "Aquila",
+            "Ursa Major ", " Leo"];
+
+
+
+        checkStarToConstell(inputString, stars, constellation);
+        function checkStarToConstell(value,array1, array2) {
+            let index = -1;
+            for (let i = 0; i < array1.length; i++){
+                if (array1[i] === value){
+                    index = i;
+                }
+            }
+
+            if (index === -1){
+               alert("không tìm thấy sao nào");
+            }else {
+                alert(array2[index]);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

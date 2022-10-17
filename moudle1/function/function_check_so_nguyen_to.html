@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check số Nguyên tố</title>
+</head>
+<body>
+    <script>
+        function isPrime(n) {
+            for (let i = 2; i <= Math.sqrt(n);i++ ){
+                if ( n%i==0){
+                    return 0;
+                }
+            }
+            return n > 1;
+        }
+
+        let numBer = +prompt("nhập vào số ");
+        let n = 2;
+        if (numBer < 2){
+            alert("vui lòng nhập lại");
+        }
+        while ( n <= numBer){
+            if (isPrime(n)){
+                document.write(n +" <br>");
+
+            }
+            n++;
+        }
+
+
+
+
+
+        // isPrime(n);
+        // document.write(n + " , ");
+        // n++;
+
+
+
+        
+
+        
+    </script>
+
+</body>
+</html>

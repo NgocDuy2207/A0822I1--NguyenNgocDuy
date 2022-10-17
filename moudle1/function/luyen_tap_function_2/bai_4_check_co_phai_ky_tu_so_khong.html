@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra có phải ký tự số không</title>
+</head>
+<body>
+    <script>
+
+        let numBer = +prompt("nhập vào ký tự bất kỳ");
+        alert(numberCharacter(numBer));
+
+        function numberCharacter(num) {
+            const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            for (let i = 0; i < number.length;i++){
+                if (num == number[i]){
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

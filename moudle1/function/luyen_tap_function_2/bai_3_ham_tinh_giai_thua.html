@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm tính giai thừa</title>
+</head>
+<body>
+    <script>
+        let inputNumber = +prompt("nhập sô tính giai thừa");
+        while (inputNumber >= 0){
+            document.write(factorial(inputNumber));
+            break;
+        }
+
+        function factorial(number) {
+            if (number == 0){
+                return 1;
+            }
+            return number*factorial(number - 1);
+
+        }
+
+
+    </script>
+
+</body>
+</html>

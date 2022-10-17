@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm tính diện tích, chu vi</title>
+</head>
+<body>
+    <script>
+        
+        let lengthNumber = +prompt("nhập chiều dài");
+        let widthNumber = +prompt("nhập chiều rộng");
+        while ( lengthNumber > 0 && widthNumber > 0 && lengthNumber > widthNumber){
+            alert("diện tích hình chữ nhật "+ isArea(lengthNumber , widthNumber)+ " cm2");
+            alert("chu vi hình chữ nhật" +isPerimeter(lengthNumber, widthNumber) + " cm");
+            break;
+        }
+        
+        
+        function isArea(a, b) {
+            return a*b;
+        }
+        function isPerimeter(a, b) {
+            return (a+b)*2;
+        }
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm đổi chỗ 2 số nguyên</title>
+</head>
+<body>
+    <script>
+        let inputNumber1 = +prompt("nhập vào số a");
+        let inputNumber2 = +prompt("nhập vào số b");
+
+        changeNumber(inputNumber1, inputNumber2);
+
+        function changeNumber( a, b) {
+           let temp;
+           temp = a;
+            a = b;
+            b = temp;
+
+             alert("a đổi thành b là :" +b);
+             alert("b đổi thành a là :" +a);
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị nhỏ nhất 3 số nguyên</title>
+</head>
+<body>
+    <script>
+        let numBer1= +prompt("nhập vào số thứ nhất");
+        let numBer2 =+prompt("nhập vào số thứ hai");
+        let numBer3 =+prompt("nhập vào số thứ ba");
+        alert("min in three number: " +isMin(numBer1, numBer2, numBer3));
+
+
+        function isMin(firstNumber, secondNumber, thirdNumber) {
+            if (firstNumber > secondNumber){
+                return secondNumber > thirdNumber ? thirdNumber : secondNumber;
+            }
+            return firstNumber > thirdNumber ? thirdNumber : firstNumber;
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược mảng</title>
+</head>
+<body>
+    <script>
+        let number = +prompt("nhập vào độ dài mảng");
+        let arr  = [];
+        for (let i = 0; i < number; i++){
+            arr[i] = prompt("nhập vào phần tử thứ " + i);
+        }
+        document.write(arr +"<br>");
+        document.write(array(arr));
+        // function sắp xếp mảng
+        function array(arr1) {
+            for (let i = 0 ; i < arr1.length/2; i++){
+                let temp = arr1[i];
+                arr1[i] = arr1[arr1.length-1-i];
+                arr1[arr1.length-1-i] = temp;
+            }
+            return arr1;
+
+        }
+
+    </script>
+
+</body>
+</html>
