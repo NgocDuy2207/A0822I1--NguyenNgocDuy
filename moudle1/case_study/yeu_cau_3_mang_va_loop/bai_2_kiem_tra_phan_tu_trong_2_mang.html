@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra phần tử trong 2 mảng</title>
+</head>
+<body>
+    <script>
+
+
+
+
+         let aArr = [7, 2, 5, 5, 3];
+         let bArr = [7, 2, 5, 4, 6, 3, 5, 3, 9];
+         let missingValue = [];
+         for (const b of bArr) {
+             let isCheck = true;
+             for (const a of aArr) {
+                 if(a == b) {
+                     isCheck = false;
+                     break;
+                 }
+             }
+             if (isCheck) {
+                 missingValue.push(b);
+             }
+         }
+
+         // let connectAB = aArr.concat(bArr);
+         //
+        // duyệt vòng for
+        //  for (let i = 0; i < bArr.length;i++){
+        //      let isCheck = true;
+        //      for (let j = 0; j < aArr.length;j++) {
+        //          if (aArr[j] == bArr[i]) {
+        //              isCheck = false;
+        //              break;
+        //          }
+        //      }
+        //      if (isCheck){
+        //          missingValue.push(bArr[i]);
+        //      }
+        //  }
+         alert(missingValue);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

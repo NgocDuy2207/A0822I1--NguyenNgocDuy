@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhậpt số in chữ</title>
+</head>
+<body>
+    <script>
+        let listNumber = prompt("nhập vào dãy số");
+        let arr = listNumber.split("");
+        let newArr = [];
+        let i = 0;
+            while (i < arr.length){
+                switch (arr[i++]) {
+                    case "0":
+                        newArr.push("không");
+                        continue;
+                    case "1":
+                        newArr.push("một");
+                        continue;
+                    case "2":
+                        newArr.push("hai");
+                        continue;
+                    case "3":
+                        newArr.push("ba");
+                        continue;
+                    case "4":
+                        newArr.push("bốn");
+                        continue;
+                    case "5":
+                        newArr.push("năm");
+                        continue;
+                    case "6":
+                        newArr.push("sáu");
+                        continue;
+                    case "7":
+                        newArr.push("bảy");
+                        continue;
+                    case "8":
+                        newArr.push("tám");
+                        continue;
+                    case "9":
+                        newArr.push("chín");
+                        continue;
+            }
+        }
+
+        alert(newArr.join(' '));
+
+
+    </script>
+
+</body>
+</html>

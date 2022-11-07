@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm ký tự khác nhau trong mảng</title>
+</head>
+<body>
+    <script>
+
+        // let dem = 0;
+        // for (let i = 0; i < arr.length;i++){
+        //     for (let j = i+1; j < arr.length-1; j++) {
+        //         if (arr[i] === arr[j]) {
+        //             check = true;
+        //         }
+        //     }
+        // }
+        // if (check = true){
+        //     dem++;
+        // }
+        // alert(dem);
+        // function accumulator(arr, element) {
+        //     let newArr = [];
+        //
+        //     return newArr;
+
+        //}
+        // alert(accumulator(arr1));
+
+        // let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd','f']
+        // let myArrayWithNoDuplicates = myArray.reduce(function (accumulator, element) {
+        //     if (accumulator.indexOf(element) === -1) {
+        //         accumulator.push(element)
+        //     }
+        //     return accumulator
+        // }, [])
+        //
+        // console.log(myArrayWithNoDuplicates);
+        // alert(myArrayWithNoDuplicates.length);
+        let arr1 = ['a', 'b','b', 'c', 'a', 'e', 'd', 'f','f'];
+        function unique(arr) {
+            let newArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        alert("số lượng ký tự khác nhau là: "+unique(arr1).length);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết chương trình tính thức uống</title>
+</head>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Drinks</th>
+            <th>Price</th>
+        </tr>
+    </table>
+<body>
+    <div id="menu">1</div>
+    <input type="text" id="order" placeholder="chọn thức uống số">
+    <button onclick="add()">Chọn</button>
+    <div id="show"></div>
+    <script>
+
+        class Drinks {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+
+            }
+            getName(){
+                return this.name;
+            }
+            getPrice(){
+                return this.price;
+            }
+        }
+        let drink1 = new Drinks("Cafe", 15000);
+        let drink2 = new Drinks("Cam Vắt", 25000);
+        let drink3 = new Drinks("Nước ép Cà Rốt", 25000);
+        let drink4 = new Drinks("Nước ép Cà Chua", 25000);
+        let drink5 = new Drinks("Nước Lọc", 15000);
+        let drink6 = new Drinks("Nước Dừa", 15000);
+
+        let menuDrinks = [drink1, drink2, drink3, drink4, drink5,drink6];
+        let orderList = [];
+        let orderAmount = [];
+
+        let menu = '<table border="1">\n' +
+            '        <tr>\n' +
+            '            <th>ID</th>\n' +
+            '            <th>Drinks</th>\n' +
+            '            <th>Price</th>\n' +
+            '        </tr>\n'
+        for (let i = 0; i < menuDrinks.length;i++){
+            menu += '<tr>\n' +
+                '            <th>'+(i+1)+'</th>\n' +
+                '            <th>'+menuDrinks[i].getName()+'</th>\n' +
+                '            <th>'+menuDrinks[i].getPrice()+'</th>\n' +
+                '        </tr>'
+
+        }
+            menu +=' </table>';
+        document.getElementById("menu").innerHTML = menu;
+
+        function add() {
+            
+
+        }
+
+
+    </script>
+
+</body>
+</html>

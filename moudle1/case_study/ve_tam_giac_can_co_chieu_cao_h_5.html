@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ tam giác cân có chiều cao h=5</title>
+</head>
+<body>
+    <script>
+        const rows = 10;
+        const cols = 30;
+        for (let i=1;i <= rows;i++) {
+            for (let j = 1; j <= cols; j++) {
+                if (j <= parseInt(cols / 2) - i || j >= parseInt(cols / 2) + i) {
+                    document.write("&nbsp&nbsp");
+                } else {
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+        //     for (let i = 1; i<=5;i++){
+        //
+        //         for (let k=5; k>i;k--){
+        //         document.write("&nbsp&nbsp");
+        //         }
+        //         for (let j=1;j<=i*2-1;j++){
+        //         document.write("*");
+        //          }
+        //         document.write("<br>");
+        //
+        // }
+
+    </script>
+
+</body>
+</html>

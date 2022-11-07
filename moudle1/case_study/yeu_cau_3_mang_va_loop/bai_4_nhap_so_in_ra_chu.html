@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập số in ra chữ</title>
+</head>
+<body>
+    <script>
+        let numbers = ['0', '1', '2', '3','4','5','6','7','8','9'];
+        let stringNumbers = [" ", "một","hai", "ba", "bốn", "năm","sáu", "bảy",
+        "tám", "chín"];
+
+        let number = prompt("enter a string number");
+        let arr = number.split('');
+        let newArr = [];
+        for (let i = 0; i < arr.length;i++){
+            for (let j = 0; j < numbers.length;j++){
+                if (arr[i]===numbers[j]){
+                    newArr.push(stringNumbers[j]);
+                }
+            }
+        }
+        console.log(newArr);
+        alert(newArr.join(', '));
+
+
+
+
+    </script>
+
+</body>
+</html>

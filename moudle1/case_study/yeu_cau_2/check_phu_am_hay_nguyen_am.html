@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check ký tự là phụ âm hay nguyên âm</title>
+</head>
+<body>
+    <script>
+        let vowelChar = ['o','u','i','a','e', 'O','U','I','A','E'];
+        let char = prompt("enter a character");
+
+        let isCheck ;
+        for (let i = 0; i < vowelChar.length;i++){
+            if (char === vowelChar[i]){
+                isCheck = true;
+                break;
+            }else {
+                continue;
+            }
+        }
+        if (isCheck) {
+            alert("ký tự là nguyên âm");
+        } else {
+            alert("ký tự là phụ âm");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vi du</title>
+</head>
+<body>
+    <script>
+        let string1 = prompt("input String");
+        // function deleteSpaceChar(string) {
+        //     let arrString = string.split(' ');
+        //     let result = '';
+        //     for (let i = 0; i < arrString.length; i++) {
+        //         if ('' !== arrString[i])
+        //             result += arrString[i] + ' ';
+        //     }
+        //     toUpperSpaceChar(string);
+        //     return result.trim();
+        //
+        // }
+
+        function toUpperSpaceChar(string) {
+            let arrString = string.split(' ');
+            let result = '';
+            for (let i = 0; i < arrString.length; i++) {
+                if ('' !== arrString[i]) {
+                    result += arrString[i].substr(0, 1).toUpperCase()
+                        + arrString[i].substr(1).toLowerCase()
+                        + ' ';
+                }
+            }
+            return result.trim();
+        }
+
+
+        alert(toUpperSpaceChar(string1));
+       // console.log(toUpperSpaceChar(string1));
+    </script>
+
+</body>
+</html>
