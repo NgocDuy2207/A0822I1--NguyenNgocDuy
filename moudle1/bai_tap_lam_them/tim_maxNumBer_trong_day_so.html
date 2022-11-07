@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm max number</title>
+</head>
+<body>
+    <script>
+        let number = prompt("nhập vào một số");
+        // chuoi = 4535;
+
+        function findMaxNumber(numbers) {
+
+            let arr = numbers.split("");
+            if (numbers < 999){
+                return -1;
+            }
+            for (let i = 0; i < arr.length; i++){
+                // let result = '';
+                if (arr[i] <= arr[i+1]){
+                    arr.splice(i,1);
+                    break;
+                }else {
+                    continue;
+                }
+                }
+                if (arr.length == numbers.length){
+                    arr.pop();
+                }
+            return arr.join('');
+        }
+        document.write(findMaxNumber(number));
+    </script>
+
+</body>
+</html>

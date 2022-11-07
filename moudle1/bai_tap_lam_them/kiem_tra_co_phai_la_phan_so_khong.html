@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra có phải là phân số không</title>
+</head>
+<body>
+    <script>
+        let x = prompt("nhập vào một phân số");
+        function find(x) {
+            //let isCheckFraction = false;
+            let arr = x.split('/');
+            if (arr.length!==2 || arr[arr.length]==0){
+                return "không phải là phân số";
+            } else if (isNaN(arr[0]) || isNaN(arr[1])){
+                 return "không phải là phân số";
+            }else if (!isNaN(arr[0]) && !isNaN(arr[1])){
+                  return arr[0]/arr[1];
+            }
+        }
+        alert(find(x));
+
+    </script>
+
+</body>
+</html>

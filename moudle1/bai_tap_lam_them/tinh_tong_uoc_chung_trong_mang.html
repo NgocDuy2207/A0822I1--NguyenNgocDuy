@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tổng ước chung trong mảng</title>
+</head>
+<body>
+    <script>
+
+        let number = prompt("nhập độ dài mảng");
+        let arr = [];
+        for (let i = 0; i < number;i++){
+            arr[i] = prompt("phần tử thứ " +i);
+        }
+        document.write(arr+"<br>");
+
+        let newArr = [];
+        for (let i = 0; i < arr.length;i++){
+
+            newArr.push(sum(arr[i]));
+
+        }
+        document.write(newArr);
+        // function tính tổng
+        function sum(number) {
+            let sum = 0;
+            for (let i = 1; i <= number;i++){
+                if (number%i==0){
+                    sum+=i;
+                }
+            }
+            return sum;
+        }
+        console.log(sum(5));
+        
+        
+        
+        
+
+
+
+    </script>
+
+</body>
+</html>

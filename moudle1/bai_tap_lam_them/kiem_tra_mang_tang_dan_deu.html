@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tang dan deu</title>
+</head>
+<body>
+    <script>
+        let number = prompt("nhập độ dài mảng");
+        let arr = [];
+        for (let i= 0;i < number;i++){
+            arr[i] = +prompt("nhập vào phần tử thứ "+i);
+        }
+        document.write(arr +"<br>");
+
+
+        // let arr = [0, 3, 5, 9, 12, 19];
+        function arrTang(arr) {
+            let dem = 1;
+            let space = arr[1]-arr[0];
+            for (let i = 0; i < arr.length;i++) {
+                if (arr[i+1]-arr[i] == space && arr[i+1] >= arr[i]) {
+                    dem++;
+                }else {
+                    break;
+                }
+            }
+            if (dem == arr.length){
+                return true;
+            }
+        }
+
+        if (arrTang(arr)==true){
+            document.write("tăng đều");
+        }else {
+            document.write(" không tăng đều");
+        }
+
+
+        // if (arrTang(arr)==arr.length){
+        //     alert("tăng dần đều");
+        // }else {
+        //     alert("không tăng đều");
+        // }
+
+        // alert(arrTang(arr));
+
+
+        // function
+
+        // function arrTang(arr) {
+        //     let space = arr[1] - arr[0];
+        //     let count = 1;
+        //     for (let i = 1; i < arr.length;i++){
+        //         if (arr[i+1]-arr[i] == space){
+        //             return count++;
+        //         }else {
+        //             continue;
+        //         }
+        //     }
+        //     return count;
+        //
+        //
+        //
+        // }
+        // arrTang();
+        // if (arrTang(arr) == arr.length){
+        //     console.log("tang deu");
+        // }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

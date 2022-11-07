@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm in ra ký tự đầu</title>
+</head>
+<body>
+    <script>
+        
+        function checkString(string) {
+            let arrString = string.split(' ');
+            let result = '';
+            if (arrString.length==1){
+                return string;
+            }
+            for (let i = 0; i < arrString.length;i++){
+                if (''!==arrString[i]){
+                    result+=arrString[i].substr(0,1).toUpperCase()
+                    +arrString[i].substr(1,1)+ ' ';
+                }
+            }
+            return result;
+        }
+        let string1 = prompt("nhập vào chuỗi");
+        document.write(checkString(string1));
+    </script>
+
+</body>
+</html>
